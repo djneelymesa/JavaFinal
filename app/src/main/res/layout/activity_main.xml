@@ -75,5 +75,27 @@
             android:layout_below="@+id/sixButton"
             android:text="3"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/twoButton"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/zeroButton"
+            android:text="0"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/zeroButton"
+            android:layout_below="@+id/oneButton"
+            android:id="@+id/back"
+            android:text="Back"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/threeButton"
+            android:layout_toRightOf="@+id/zeroButton"
+            android:id="@+id/cButton"
+            android:text="C"/>
+
     </RelativeLayout>
 </layout>
