@@ -8,12 +8,63 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
-    private View.OnClickListener input = new View.OnClickListener(){
+
+    private View.OnClickListener input1 = new View.OnClickListener(){
         public void onClick(View v){
             TextView textbox = (TextView) findViewById(R.id.textbox);
-            textbox.setText("1");
+            textbox.append("1");
+        }
+    };
+    private View.OnClickListener input2 = new View.OnClickListener(){
+        public void onClick(View v){
+            TextView textbox = (TextView) findViewById(R.id.textbox);
+            textbox.append("2");
+        }
+    };
+    private View.OnClickListener input3 = new View.OnClickListener(){
+        public void onClick(View v){
+            TextView textbox = (TextView) findViewById(R.id.textbox);
+            textbox.append("3");
+        }
+    };
+    private View.OnClickListener input4 = new View.OnClickListener(){
+        public void onClick(View v){
+            TextView textbox = (TextView) findViewById(R.id.textbox);
+            textbox.append("4");
+        }
+    };
+    private View.OnClickListener input5 = new View.OnClickListener(){
+        public void onClick(View v){
+            TextView textbox = (TextView) findViewById(R.id.textbox);
+            textbox.append("5");
+        }
+    };
+    private View.OnClickListener input6 = new View.OnClickListener(){
+        public void onClick(View v){
+            TextView textbox = (TextView) findViewById(R.id.textbox);
+            textbox.append("6");
+        }
+    };
+    private View.OnClickListener input7 = new View.OnClickListener(){
+        public void onClick(View v){
+            TextView textbox = (TextView) findViewById(R.id.textbox);
+            textbox.append("7");
+        }
+    };
+    private View.OnClickListener input8 = new View.OnClickListener(){
+        public void onClick(View v){
+            TextView textbox = (TextView) findViewById(R.id.textbox);
+            textbox.append("8");
+        }
+    };
+    private View.OnClickListener input9 = new View.OnClickListener(){
+        public void onClick(View v){
+            TextView textbox = (TextView) findViewById(R.id.textbox);
+            textbox.append("9");
         }
     };
 
@@ -24,15 +75,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button oneButton = (Button) findViewById(R.id.oneButton);
-        oneButton.setOnClickListener(input);
+        oneButton.setOnClickListener(input1);
         Button twoButton = (Button) findViewById(R.id.twoButton);
+        twoButton.setOnClickListener(input2);
         Button threeButton = (Button) findViewById(R.id.threeButton);
+        threeButton.setOnClickListener(input3);
         Button fourButton = (Button) findViewById(R.id.fourButton);
+        fourButton.setOnClickListener(input4);
         Button fiveButton = (Button) findViewById(R.id.fiveButton);
+        fiveButton.setOnClickListener(input5);
         Button sixButton = (Button) findViewById(R.id.sixButton);
+        sixButton.setOnClickListener(input6);
         Button sevenButton = (Button) findViewById(R.id.sevenButton);
+        sevenButton.setOnClickListener(input7);
         Button eightButton = (Button) findViewById(R.id.eightButton);
+        eightButton.setOnClickListener(input8);
         Button nineButton = (Button) findViewById(R.id.nineButton);
+        nineButton.setOnClickListener(input9);
 
     }
 }
