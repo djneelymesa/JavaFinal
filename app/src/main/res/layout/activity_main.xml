@@ -96,6 +96,48 @@
             android:layout_toRightOf="@+id/zeroButton"
             android:id="@+id/cButton"
             android:text="Clear"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/back"
+            android:layout_toLeftOf="@+id/minusButton"
+            android:id="@+id/plusButton"
+            android:text="+"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/zeroButton"
+            android:id="@+id/minusButton"
+            android:text="-"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cButton"
+            android:layout_toRightOf="@+id/minusButton"
+            android:id="@+id/multButton"
+            android:text="*"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/minusButton"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/modButton"
+            android:text="mod"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/modButton"
+            android:layout_below="@id/plusButton"
+            android:id="@+id/dividButton"
+            android:text="/"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/multButton"
+            android:layout_toRightOf="@+id/modButton"
+            android:id="@+id/enterButton"
+            android:text="Enter"/>
 
     </RelativeLayout>
 </layout>
