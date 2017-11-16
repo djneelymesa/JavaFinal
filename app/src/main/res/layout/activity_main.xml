@@ -95,7 +95,7 @@
             android:layout_below="@+id/threeButton"
             android:layout_toRightOf="@+id/zeroButton"
             android:id="@+id/cButton"
-            android:text="C"/>
+            android:text="Clear"/>
 
     </RelativeLayout>
 </layout>

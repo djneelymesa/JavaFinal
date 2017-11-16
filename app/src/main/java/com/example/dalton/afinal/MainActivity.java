@@ -68,6 +68,32 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    private View.OnClickListener input0 = new View.OnClickListener(){
+        public void onClick(View v){
+            TextView textBox = findViewById(R.id.textbox);
+            textBox.append("0");
+        }
+    };
+
+    private View.OnClickListener inputBack = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            TextView textBox = findViewById(R.id.textbox);
+            String input;
+            input = textBox.getEditableText().toString();
+            if(input.length() != 0)
+                textBox.setText(input.substring(0, input.length() - 1).toCharArray(), 0, input.length() - 1);
+        }
+    };
+
+    private View.OnClickListener inputClear = new View.OnClickListener(){
+        @Override
+        public void onClick(View view){
+            TextView textBox = findViewById(R.id.textbox);
+            textBox.setText("");
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -92,6 +118,11 @@ public class MainActivity extends AppCompatActivity {
         eightButton.setOnClickListener(input8);
         Button nineButton = (Button) findViewById(R.id.nineButton);
         nineButton.setOnClickListener(input9);
-
+        Button zeroButton = findViewById(R.id.zeroButton);
+        zeroButton.setOnClickListener(input0);
+        Button backButton = findViewById(R.id.back);
+        backButton.setOnClickListener(inputBack);
+        Button cButton = findViewById(R.id.cButton);
+        cButton.setOnClickListener(inputClear);
     }
 }
