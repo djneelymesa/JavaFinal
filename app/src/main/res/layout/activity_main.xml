@@ -4,5 +4,69 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sevenButton"
+            android:layout_toLeftOf="@+id/eightButton"
+            android:layout_above="@+id/fourButton"
+            android:text="7"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/eightButton"
+            android:layout_above="@+id/fiveButton"
+            android:layout_centerHorizontal="true"
+            android:text="8"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nineButton"
+            android:layout_toRightOf="@+id/eightButton"
+            android:layout_above="@+id/sixButton"
+            android:text="9"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fourButton"
+            android:layout_toLeftOf="@+id/fiveButton"
+            android:layout_centerVertical="true"
+            android:text="4"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/fiveButton"
+            android:text="5"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sixButton"
+            android:layout_toRightOf="@+id/fiveButton"
+            android:layout_centerVertical="true"
+            android:text="6"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/oneButton"
+            android:layout_toLeftOf="@+id/twoButton"
+            android:layout_below="@+id/fourButton"
+            android:text="1"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fiveButton"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/twoButton"
+            android:text="2"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/threeButton"
+            android:layout_toRightOf="@+id/twoButton"
+            android:layout_below="@+id/sixButton"
+            android:text="3"/>
+
     </RelativeLayout>
 </layout>
