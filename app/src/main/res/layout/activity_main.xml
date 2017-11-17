@@ -6,11 +6,28 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:layout_width="500px"
-            android:layout_height="100px"
+            android:layout_width="200px"
+            android:layout_height="150px"
+            android:layout_toLeftOf="@+id/opBox"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/back"
+            android:id="@+id/firstBox"/>
+
+        <TextView
+            android:layout_width="50px"
+            android:layout_height="50px"
             android:layout_centerHorizontal="true"
-            android:layout_above="@+id/eightButton"
-            android:id="@+id/textbox"/>
+            android:layout_alignParentTop="true"
+            android:background="@drawable/back"
+            android:id="@+id/opBox"/>
+
+        <TextView
+            android:layout_width="200px"
+            android:layout_height="150px"
+            android:layout_toRightOf="@+id/opBox"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/back"
+            android:id="@+id/secondBox"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -94,50 +111,101 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/threeButton"
             android:layout_toRightOf="@+id/zeroButton"
-            android:id="@+id/cButton"
+            android:id="@+id/clearButton"
             android:text="Clear"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/back"
-            android:layout_toLeftOf="@+id/minusButton"
-            android:id="@+id/plusButton"
-            android:text="+"/>
+            android:layout_above="@+id/dButton"
+            android:layout_toLeftOf="@+id/bButton"
+            android:text="A"
+            android:id="@+id/aButton" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/zeroButton"
-            android:id="@+id/minusButton"
-            android:text="-"/>
+            android:layout_above="@+id/eButton"
+            android:text="B"
+            android:id="@+id/bButton" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/cButton"
-            android:layout_toRightOf="@+id/minusButton"
-            android:id="@+id/multButton"
-            android:text="*"/>
+            android:layout_above="@+id/dButton"
+            android:layout_toRightOf="@+id/bButton"
+            android:text="C"
+            android:id="@+id/cButton" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/minusButton"
+            android:layout_toLeftOf="@+id/eButton"
+            android:layout_above="@+id/sevenButton"
+            android:text="D"
+            android:id="@+id/dButton" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:id="@+id/modButton"
-            android:text="mod"/>
+            android:layout_above="@+id/eightButton"
+            android:text="E"
+            android:id="@+id/eButton" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/modButton"
-            android:layout_below="@id/plusButton"
-            android:id="@+id/dividButton"
-            android:text="/"/>
+            android:layout_toRightOf="@+id/eButton"
+            android:layout_above="@+id/nineButton"
+            android:text="F"
+            android:id="@+id/fButton" />
+
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/multButton"
-            android:layout_toRightOf="@+id/modButton"
+            android:layout_above="@+id/andButton"
+            android:layout_toLeftOf="@+id/enterButton"
+            android:id="@+id/hexButton"
+            android:text="HEX"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/xorButton"
+            android:layout_centerHorizontal="true"
             android:id="@+id/enterButton"
             android:text="Enter"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/andButton"
+            android:layout_toRightOf="@+id/enterButton"
+            android:id="@+id/binaryButton"
+            android:text="BINARY"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="XOR"
+            android:id="@+id/xorButton"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/xorButton"
+            android:text="AND"
+            android:id="@+id/andButton"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/xorButton"
+            android:text="OR"
+            android:id="@+id/orButton"/>
 
     </RelativeLayout>
 </layout>

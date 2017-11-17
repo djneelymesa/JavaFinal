@@ -1,148 +1,170 @@
 package com.example.dalton.afinal;
 
-import android.databinding.DataBindingUtil;
-import android.databinding.ViewDataBinding;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
+
+    int focus = 1;
 
 
     private View.OnClickListener input1 = new View.OnClickListener(){
         public void onClick(View v){
-            TextView textbox = (TextView) findViewById(R.id.textbox);
-            textbox.append("1");
+
         }
     };
     private View.OnClickListener input2 = new View.OnClickListener(){
         public void onClick(View v){
-            TextView textbox = (TextView) findViewById(R.id.textbox);
-            textbox.append("2");
+
         }
     };
     private View.OnClickListener input3 = new View.OnClickListener(){
         public void onClick(View v){
-            TextView textbox = (TextView) findViewById(R.id.textbox);
-            textbox.append("3");
+
         }
     };
     private View.OnClickListener input4 = new View.OnClickListener(){
         public void onClick(View v){
-            TextView textbox = (TextView) findViewById(R.id.textbox);
-            textbox.append("4");
+
         }
     };
     private View.OnClickListener input5 = new View.OnClickListener(){
         public void onClick(View v){
-            TextView textbox = (TextView) findViewById(R.id.textbox);
-            textbox.append("5");
+
         }
     };
     private View.OnClickListener input6 = new View.OnClickListener(){
         public void onClick(View v){
-            TextView textbox = (TextView) findViewById(R.id.textbox);
-            textbox.append("6");
+
         }
     };
     private View.OnClickListener input7 = new View.OnClickListener(){
         public void onClick(View v){
-            TextView textbox = (TextView) findViewById(R.id.textbox);
-            textbox.append("7");
+
         }
     };
     private View.OnClickListener input8 = new View.OnClickListener(){
         public void onClick(View v){
-            TextView textbox = (TextView) findViewById(R.id.textbox);
-            textbox.append("8");
+
         }
     };
     private View.OnClickListener input9 = new View.OnClickListener(){
         public void onClick(View v){
-            TextView textbox = (TextView) findViewById(R.id.textbox);
-            textbox.append("9");
+
         }
     };
 
     private View.OnClickListener input0 = new View.OnClickListener(){
         public void onClick(View v){
-            TextView textBox = findViewById(R.id.textbox);
-            textBox.append("0");
+            if(focus == 1) {
+                TextView firstBox = findViewById(R.id.firstBox);
+                firstBox.append("0");
+            }else if(focus == 2){
+                TextView secondBox = findViewById(R.id.secondBox);
+                secondBox.append("0");
+            }
         }
     };
 
-    private View.OnClickListener inputPlus = new View.OnClickListener(){
-        public void onClick(View v){
-            TextView textBox = findViewById(R.id.textbox);
-            textBox.append(" + ");
-        }
-    };
+    private View.OnClickListener inputA = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
 
-    private View.OnClickListener inputMinus = new View.OnClickListener(){
-        public void onClick(View v){
-            TextView textBox = findViewById(R.id.textbox);
-            textBox.append(" - ");
         }
     };
+    private View.OnClickListener inputB = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
 
-    private View.OnClickListener inputMult = new View.OnClickListener(){
-        public void onClick(View v){
-            TextView textBox = findViewById(R.id.textbox);
-            textBox.append(" * ");
         }
     };
-    private View.OnClickListener inputDivide = new View.OnClickListener(){
-        public void onClick(View v){
-            TextView textBox = findViewById(R.id.textbox);
-            textBox.append(" / ");
-        }
-    };
+    private View.OnClickListener inputC = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
 
-    private View.OnClickListener inputMod = new View.OnClickListener(){
-        public void onClick(View v){
-            TextView textBox = findViewById(R.id.textbox);
-            textBox.append(" MOD ");
+        }
+    };
+    private View.OnClickListener inputD = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+
+        }
+    };
+    private View.OnClickListener inputE = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+
+        }
+    };
+    private View.OnClickListener inputF = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+
         }
     };
 
     private View.OnClickListener inputBack = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            TextView textBox = findViewById(R.id.textbox);
-            String input;
-            input = textBox.getEditableText().toString();
-            if(input.length() != 0)
-                textBox.setText(input.substring(0, input.length() - 1).toCharArray(), 0, input.length() - 1);
+           // TextView textBox = findViewById(R.id.textbox);
+           // String input;
+           // input = textBox.getEditableText().toString();
+           // if(input.length() != 0)
+                //textBox.setText(input.substring(0, input.length() - 1).toCharArray(), 0, input.length() - 1);
+            if(focus == 1){
+                TextView firstBox = findViewById(R.id.firstBox);
+                String firstBoxInput = firstBox.getEditableText().toString();
+                if(firstBoxInput.length() != 0){
+                    firstBox.setText(firstBoxInput.substring(0, firstBoxInput.length() -1).toCharArray(), 0, firstBoxInput.length() -1);
+                }
+            }else if(focus == 2){
+                TextView secondBox = findViewById(R.id.secondBox);
+                String secondBoxInput = secondBox.getEditableText().toString();
+                if(secondBoxInput.length() != 0){
+                    secondBox.setText(secondBoxInput.substring(0, secondBoxInput.length() -1).toCharArray(), 0, secondBoxInput.length() -1);
+                }
+            }
         }
     };
 
     private View.OnClickListener inputClear = new View.OnClickListener(){
         @Override
         public void onClick(View view){
-            TextView textBox = findViewById(R.id.textbox);
-            textBox.setText("");
+            if(focus == 1){
+                TextView firstBox = findViewById(R.id.firstBox);
+                firstBox.setText("");
+            }else if(focus == 2) {
+                TextView secondBox = findViewById(R.id.secondBox);
+                secondBox.setText("");
+            }
         }
     };
 
+
+
     private View.OnClickListener inputEnter = new View.OnClickListener(){
         public void onClick(View v){
-            TextView textBox = findViewById(R.id.textbox);
-            //Do stuff with context free grammar to validate expression
-            //<expression> --> number
-            //             --> ( <expression> )
-            //             --> <expression> + <expression>
-            //             --> <expression> - <expression>
-            //             --> <expression> * <expression>
-            //             --> <expression> / <expression>
-            //             --> <expression> MOD <expression>
-            //<number>     --> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
-            String inputStream = textBox.getEditableText().toString();
-            //Parse the stream here
+            //TextView textBox = findViewById(R.id.textbox);
+            //String inputStream = textBox.getEditableText().toString();
+        }
+    };
+
+    private View.OnClickListener firstBoxClick = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            focus = 1;
+        }
+    };
+
+    private View.OnClickListener secondBoxClick = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            focus = 2;
         }
     };
 
@@ -152,41 +174,37 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button oneButton = (Button) findViewById(R.id.oneButton);
+        Button oneButton = findViewById(R.id.oneButton);
         oneButton.setOnClickListener(input1);
-        Button twoButton = (Button) findViewById(R.id.twoButton);
+        Button twoButton = findViewById(R.id.twoButton);
         twoButton.setOnClickListener(input2);
-        Button threeButton = (Button) findViewById(R.id.threeButton);
+        Button threeButton = findViewById(R.id.threeButton);
         threeButton.setOnClickListener(input3);
-        Button fourButton = (Button) findViewById(R.id.fourButton);
+        Button fourButton = findViewById(R.id.fourButton);
         fourButton.setOnClickListener(input4);
-        Button fiveButton = (Button) findViewById(R.id.fiveButton);
+        Button fiveButton = findViewById(R.id.fiveButton);
         fiveButton.setOnClickListener(input5);
-        Button sixButton = (Button) findViewById(R.id.sixButton);
+        Button sixButton = findViewById(R.id.sixButton);
         sixButton.setOnClickListener(input6);
-        Button sevenButton = (Button) findViewById(R.id.sevenButton);
+        Button sevenButton = findViewById(R.id.sevenButton);
         sevenButton.setOnClickListener(input7);
-        Button eightButton = (Button) findViewById(R.id.eightButton);
+        Button eightButton = findViewById(R.id.eightButton);
         eightButton.setOnClickListener(input8);
-        Button nineButton = (Button) findViewById(R.id.nineButton);
+        Button nineButton = findViewById(R.id.nineButton);
         nineButton.setOnClickListener(input9);
         Button zeroButton = findViewById(R.id.zeroButton);
         zeroButton.setOnClickListener(input0);
         Button backButton = findViewById(R.id.back);
         backButton.setOnClickListener(inputBack);
-        Button cButton = findViewById(R.id.cButton);
-        cButton.setOnClickListener(inputClear);
-        Button plusButton = findViewById(R.id.plusButton);
-        Button minusButton = findViewById(R.id.minusButton);
-        Button multButton = findViewById(R.id.multButton);
-        Button dividButton = findViewById(R.id.dividButton);
-        Button modButton = findViewById(R.id.modButton);
+        Button clearButton = findViewById(R.id.clearButton);
+        clearButton.setOnClickListener(inputClear);
         Button enterButton = findViewById(R.id.enterButton);
-        plusButton.setOnClickListener(inputPlus);
-        minusButton.setOnClickListener(inputMinus);
-        dividButton.setOnClickListener(inputDivide);
-        multButton.setOnClickListener(inputMult);
-        modButton.setOnClickListener(inputMod);
         enterButton.setOnClickListener(inputEnter);
+
+        TextView firstBox = findViewById(R.id.firstBox);
+        TextView secondBox = findViewById(R.id.secondBox);
+
+        firstBox.setOnClickListener(firstBoxClick);
+        secondBox.setOnClickListener(secondBoxClick);
     }
 }
