@@ -15,47 +15,101 @@ public class MainActivity extends AppCompatActivity {
 
     private View.OnClickListener input1 = new View.OnClickListener(){
         public void onClick(View v){
-
+            if(focus == 1){
+                TextView firstBox = findViewById(R.id.firstBox);
+                firstBox.append("1");
+            }else if(focus == 2){
+                TextView secondBox = findViewById(R.id.secondBox);
+                secondBox.append("1");
+            }
         }
     };
     private View.OnClickListener input2 = new View.OnClickListener(){
         public void onClick(View v){
-
+            if(focus == 1){
+                TextView firstBox = findViewById(R.id.firstBox);
+                firstBox.append("2");
+            }else if(focus == 2){
+                TextView secondBox = findViewById(R.id.secondBox);
+                secondBox.append("2");
+            }
         }
     };
     private View.OnClickListener input3 = new View.OnClickListener(){
         public void onClick(View v){
-
+            if(focus == 1){
+                TextView firstBox = findViewById(R.id.firstBox);
+                firstBox.append("3");
+            }else if(focus == 2){
+                TextView secondBox = findViewById(R.id.secondBox);
+                secondBox.append("3");
+            }
         }
     };
     private View.OnClickListener input4 = new View.OnClickListener(){
         public void onClick(View v){
-
+            if(focus == 1){
+                TextView firstBox = findViewById(R.id.firstBox);
+                firstBox.append("4");
+            }else if(focus == 2){
+                TextView secondBox = findViewById(R.id.secondBox);
+                secondBox.append("4");
+            }
         }
     };
     private View.OnClickListener input5 = new View.OnClickListener(){
         public void onClick(View v){
-
+            if(focus == 1){
+                TextView firstBox = findViewById(R.id.firstBox);
+                firstBox.append("5");
+            }else if(focus == 2){
+                TextView secondBox = findViewById(R.id.secondBox);
+                secondBox.append("5");
+            }
         }
     };
     private View.OnClickListener input6 = new View.OnClickListener(){
         public void onClick(View v){
-
+            if(focus == 1){
+                TextView firstBox = findViewById(R.id.firstBox);
+                firstBox.append("6");
+            }else if(focus == 2){
+                TextView secondBox = findViewById(R.id.secondBox);
+                secondBox.append("6");
+            }
         }
     };
     private View.OnClickListener input7 = new View.OnClickListener(){
         public void onClick(View v){
-
+            if(focus == 1){
+                TextView firstBox = findViewById(R.id.firstBox);
+                firstBox.append("7");
+            }else if(focus == 2){
+                TextView secondBox = findViewById(R.id.secondBox);
+                secondBox.append("7");
+            }
         }
     };
     private View.OnClickListener input8 = new View.OnClickListener(){
         public void onClick(View v){
-
+            if(focus == 1){
+                TextView firstBox = findViewById(R.id.firstBox);
+                firstBox.append("8");
+            }else if(focus == 2){
+                TextView secondBox = findViewById(R.id.secondBox);
+                secondBox.append("8");
+            }
         }
     };
     private View.OnClickListener input9 = new View.OnClickListener(){
         public void onClick(View v){
-
+            if(focus == 1){
+                TextView firstBox = findViewById(R.id.firstBox);
+                firstBox.append("9");
+            }else if(focus == 2){
+                TextView secondBox = findViewById(R.id.secondBox);
+                secondBox.append("9");
+            }
         }
     };
 
@@ -74,37 +128,74 @@ public class MainActivity extends AppCompatActivity {
     private View.OnClickListener inputA = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
+            if(focus == 1){
+                TextView firstBox = findViewById(R.id.firstBox);
+                firstBox.append("A");
+            }else if(focus == 2){
+                TextView secondBox = findViewById(R.id.secondBox);
+                secondBox.append("A");
+            }
 
         }
     };
     private View.OnClickListener inputB = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
+            if(focus == 1){
+                TextView firstBox = findViewById(R.id.firstBox);
+                firstBox.append("B");
+            }else if(focus == 2){
+                TextView secondBox = findViewById(R.id.secondBox);
+                secondBox.append("B");
+            }
         }
     };
     private View.OnClickListener inputC = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
+            if(focus == 1){
+                TextView firstBox = findViewById(R.id.firstBox);
+                firstBox.append("C");
+            }else if(focus == 2){
+                TextView secondBox = findViewById(R.id.secondBox);
+                secondBox.append("C");
+            }
         }
     };
     private View.OnClickListener inputD = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
+            if(focus == 1){
+                TextView firstBox = findViewById(R.id.firstBox);
+                firstBox.append("D");
+            }else if(focus == 2){
+                TextView secondBox = findViewById(R.id.secondBox);
+                secondBox.append("D");
+            }
         }
     };
     private View.OnClickListener inputE = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
+            if(focus == 1){
+                TextView firstBox = findViewById(R.id.firstBox);
+                firstBox.append("E");
+            }else if(focus == 2){
+                TextView secondBox = findViewById(R.id.secondBox);
+                secondBox.append("E");
+            }
         }
     };
     private View.OnClickListener inputF = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
+            if(focus == 1){
+                TextView firstBox = findViewById(R.id.firstBox);
+                firstBox.append("F");
+            }else if(focus == 2){
+                TextView secondBox = findViewById(R.id.secondBox);
+                secondBox.append("F");
+            }
         }
     };
 
@@ -206,5 +297,19 @@ public class MainActivity extends AppCompatActivity {
 
         firstBox.setOnClickListener(firstBoxClick);
         secondBox.setOnClickListener(secondBoxClick);
+
+        Button aButton = findViewById(R.id.aButton);
+        Button bButton = findViewById(R.id.bButton);
+        Button cButton = findViewById(R.id.cButton);
+        Button dButton = findViewById(R.id.dButton);
+        Button eButton = findViewById(R.id.eButton);
+        Button fButton = findViewById(R.id.fButton);
+
+        aButton.setOnClickListener(inputA);
+        bButton.setOnClickListener(inputB);
+        cButton.setOnClickListener(inputC);
+        dButton.setOnClickListener(inputD);
+        eButton.setOnClickListener(inputE);
+        fButton.setOnClickListener(inputF);
     }
 }
