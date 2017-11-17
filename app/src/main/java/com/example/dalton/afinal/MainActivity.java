@@ -4,6 +4,7 @@ import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -132,7 +133,16 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v){
             TextView textBox = findViewById(R.id.textbox);
             //Do stuff with context free grammar to validate expression
-            textBox.append("0");
+            //<expression> --> number
+            //             --> ( <expression> )
+            //             --> <expression> + <expression>
+            //             --> <expression> - <expression>
+            //             --> <expression> * <expression>
+            //             --> <expression> / <expression>
+            //             --> <expression> MOD <expression>
+            //<number>     --> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+            String inputStream = textBox.getEditableText().toString();
+            //Parse the stream here
         }
     };
 
