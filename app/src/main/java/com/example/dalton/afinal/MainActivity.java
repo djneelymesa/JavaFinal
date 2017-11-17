@@ -202,11 +202,6 @@ public class MainActivity extends AppCompatActivity {
     private View.OnClickListener inputBack = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-           // TextView textBox = findViewById(R.id.textbox);
-           // String input;
-           // input = textBox.getEditableText().toString();
-           // if(input.length() != 0)
-                //textBox.setText(input.substring(0, input.length() - 1).toCharArray(), 0, input.length() - 1);
             if(focus == 1){
                 TextView firstBox = findViewById(R.id.firstBox);
                 String firstBoxInput = firstBox.getEditableText().toString();
@@ -259,6 +254,29 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    private View.OnClickListener inputAnd = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            TextView opBox = findViewById(R.id.opBox);
+            opBox.setText("AND");
+        }
+    };
+
+    private View.OnClickListener inputXor = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            TextView opBox = findViewById(R.id.opBox);
+            opBox.setText("XOR");
+        }
+    };
+    private View.OnClickListener inputOr = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            TextView opBox = findViewById(R.id.opBox);
+            opBox.setText("OR");
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -294,9 +312,11 @@ public class MainActivity extends AppCompatActivity {
 
         TextView firstBox = findViewById(R.id.firstBox);
         TextView secondBox = findViewById(R.id.secondBox);
+        TextView opBox = findViewById(R.id.opBox);
 
         firstBox.setOnClickListener(firstBoxClick);
         secondBox.setOnClickListener(secondBoxClick);
+        opBox.setText("XOR");
 
         Button aButton = findViewById(R.id.aButton);
         Button bButton = findViewById(R.id.bButton);
@@ -311,5 +331,15 @@ public class MainActivity extends AppCompatActivity {
         dButton.setOnClickListener(inputD);
         eButton.setOnClickListener(inputE);
         fButton.setOnClickListener(inputF);
+
+        Button andButton = findViewById(R.id.andButton);
+        Button xorButton = findViewById(R.id.xorButton);
+        Button orButton = findViewById(R.id.orButton);
+
+        andButton.setOnClickListener(inputAnd);
+        xorButton.setOnClickListener(inputXor);
+        orButton.setOnClickListener(inputOr);
+
+
     }
 }

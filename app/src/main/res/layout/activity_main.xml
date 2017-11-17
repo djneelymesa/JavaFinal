@@ -14,7 +14,7 @@
             android:id="@+id/firstBox"/>
 
         <TextView
-            android:layout_width="50px"
+            android:layout_width="100px"
             android:layout_height="50px"
             android:layout_centerHorizontal="true"
             android:layout_alignParentTop="true"
@@ -28,6 +28,13 @@
             android:layout_alignParentTop="true"
             android:background="@drawable/back"
             android:id="@+id/secondBox"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bButton"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/result"/>
 
         <Button
             android:layout_width="wrap_content"
