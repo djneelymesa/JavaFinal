@@ -75,6 +75,40 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    private View.OnClickListener inputPlus = new View.OnClickListener(){
+        public void onClick(View v){
+            TextView textBox = findViewById(R.id.textbox);
+            textBox.append(" + ");
+        }
+    };
+
+    private View.OnClickListener inputMinus = new View.OnClickListener(){
+        public void onClick(View v){
+            TextView textBox = findViewById(R.id.textbox);
+            textBox.append(" - ");
+        }
+    };
+
+    private View.OnClickListener inputMult = new View.OnClickListener(){
+        public void onClick(View v){
+            TextView textBox = findViewById(R.id.textbox);
+            textBox.append(" * ");
+        }
+    };
+    private View.OnClickListener inputDivide = new View.OnClickListener(){
+        public void onClick(View v){
+            TextView textBox = findViewById(R.id.textbox);
+            textBox.append(" / ");
+        }
+    };
+
+    private View.OnClickListener inputMod = new View.OnClickListener(){
+        public void onClick(View v){
+            TextView textBox = findViewById(R.id.textbox);
+            textBox.append(" MOD ");
+        }
+    };
+
     private View.OnClickListener inputBack = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -91,6 +125,14 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View view){
             TextView textBox = findViewById(R.id.textbox);
             textBox.setText("");
+        }
+    };
+
+    private View.OnClickListener inputEnter = new View.OnClickListener(){
+        public void onClick(View v){
+            TextView textBox = findViewById(R.id.textbox);
+            //Do stuff with context free grammar to validate expression
+            textBox.append("0");
         }
     };
 
@@ -124,5 +166,17 @@ public class MainActivity extends AppCompatActivity {
         backButton.setOnClickListener(inputBack);
         Button cButton = findViewById(R.id.cButton);
         cButton.setOnClickListener(inputClear);
+        Button plusButton = findViewById(R.id.plusButton);
+        Button minusButton = findViewById(R.id.minusButton);
+        Button multButton = findViewById(R.id.multButton);
+        Button dividButton = findViewById(R.id.dividButton);
+        Button modButton = findViewById(R.id.modButton);
+        Button enterButton = findViewById(R.id.enterButton);
+        plusButton.setOnClickListener(inputPlus);
+        minusButton.setOnClickListener(inputMinus);
+        dividButton.setOnClickListener(inputDivide);
+        multButton.setOnClickListener(inputMult);
+        modButton.setOnClickListener(inputMod);
+        enterButton.setOnClickListener(inputEnter);
     }
 }
