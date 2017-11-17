@@ -11,6 +11,7 @@ import org.w3c.dom.Text;
 public class MainActivity extends AppCompatActivity {
 
     int focus = 1;
+    int mode = 1;
 
 
     private View.OnClickListener input1 = new View.OnClickListener(){
@@ -235,8 +236,18 @@ public class MainActivity extends AppCompatActivity {
 
     private View.OnClickListener inputEnter = new View.OnClickListener(){
         public void onClick(View v){
-            //TextView textBox = findViewById(R.id.textbox);
-            //String inputStream = textBox.getEditableText().toString();
+            TextView firstBox = findViewById(R.id.firstBox);
+            TextView secondBox = findViewById(R.id.secondBox);
+            TextView opBox = findViewById(R.id.secondBox);
+            String first = firstBox.getEditableText().toString();
+            String second = secondBox.getEditableText().toString();
+            String op = opBox.getEditableText().toString();
+            //mode 1 is Hex; mode 2 is binary
+            if(mode == 1){
+
+            }else if(mode == 2){
+
+            }
         }
     };
 
