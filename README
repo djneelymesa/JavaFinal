@@ -1,2 +1,10 @@
 Java Final
 Dalton Neely
+
+Description:
+This application does XOR, OR, and AND gate operations on HEX and BINARY data
+    - Testing is used in this application
+        - JUint4 is used for testing
+    - Event Handlers and Event Listeners are used
+
+API: 27 (OREO)

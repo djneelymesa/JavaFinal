@@ -1,5 +1,7 @@
 package com.example.dalton.afinal;
 
+import android.net.wifi.p2p.WifiP2pManager;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
