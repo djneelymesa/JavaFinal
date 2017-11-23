@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     int focus = 1;
     int mode = 1;
     int operation = 1;
+    public ArrayList<String> ss = new ArrayList<String>(16);
 
 
     private View.OnClickListener input1 = new View.OnClickListener(){
@@ -304,8 +305,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
-
-    public ArrayList<String> ss = new ArrayList<String>(16);
 
     public String hexToBin(String input){
         if(ss.size() <= 0) {
