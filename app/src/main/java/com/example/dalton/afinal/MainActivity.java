@@ -307,7 +307,7 @@ public class MainActivity extends AppCompatActivity {
 
     public ArrayList<String> ss = new ArrayList<String>(16);
 
-    private String hexToBin(String input){
+    public String hexToBin(String input){
         if(ss.size() <= 0) {
             ss.add(0, "0000");
             ss.add(1, "0001");
@@ -445,14 +445,14 @@ public class MainActivity extends AppCompatActivity {
         return output;
     }
 
-    int getBiggest(int a, int b){
+    public int getBiggest(int a, int b){
         if(a > b){
             return a;
         }else{
             return b;
         }
     }
-    int getSmallest(int a, int b){
+    public int getSmallest(int a, int b){
         if(a < b){
             return a;
         }else{
